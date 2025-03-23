@@ -17,43 +17,88 @@
     </ul>
 </nav>
 
+
+
+
 <section id="cost-budget-estimator">
     <h2>Cost & Budget Estimator</h2>
     <p>Estimate your total university cost and manage your monthly budget:</p>
 
+    <!-- Cost Estimator Form -->
+    <form id="cost-form">
+        <label for="tuition">Tuition Fees ($): </label>
+        <input type="number" id="tuition" required><br><br>
+
+        <label for="living">Living Expenses ($): </label>
+        <input type="number" id="living" required><br><br>
+
+        <button type="submit">Calculate Total Cost</button>
+    </form>
+    <p id="total-cost">Total Cost: $0</p>
+
+    <!-- Budgeting Tool Form -->
+    <form id="budget-form">
+        <label for="income">Monthly Income ($): </label>
+        <input type="number" id="income" required><br><br>
+
+        <label for="food-expenses">Food ($): </label>
+        <input type="number" id="food-expenses" required><br><br>
+
+        <label for="rent-expenses">Rent ($): </label>
+        <input type="number" id="rent-expenses" required><br><br>
+
+        <label for="entertainment-expenses">Entertainment ($): </label>
+        <input type="number" id="entertainment-expenses" required><br><br>
+
+        <button type="submit">Calculate Budget</button>
+    </form>
+    <p id="monthly-budget">Remaining Budget: $0</p>
 
 
 
 
-<!-- Cost Estimator Form -->
-<form id="cost-form">
-    <label for="tuition">Tuition Fees ($): </label>
-    <input type="number" id="tuition" required><br><br>
 
-    <label for="living">Living Expenses ($): </label>
-    <input type="number" id="living" required><br><br>
+    <!-- New Information Section for Students -->
+    <section id="helpful-info">
+        <h3>Helpful Information for New Students</h3>
+        <p>As a new student at the University of Wolverhampton, it's important to plan for daily expenses like groceries, transportation, and other living costs. Here are some tips to help you manage:</p>
 
-    <button type="submit">Calculate Total Cost</button>
-</form>
-<p id="total-cost">Total Cost: $0</p>
+        <h4>1. Getting Groceries</h4>
+        <p>There are a variety of supermarkets in and around Wolverhampton where you can buy affordable groceries. Some popular options include:</p>
+        <ul>
+            <li><strong>Asda</strong> – A large store with a wide variety of food and household items. Located at <em>Wolverhampton, WV10 9QY</em> <a href="https://www.google.com/maps/search/?q=Wolverhampton,+WV10+9QY" target="_blank">[View on Google Maps]</a></li>
+            <li><strong>Tesco</strong> – Another large supermarket chain. They also offer delivery services. Located at <em>Wolverhampton, WV1 1AD</em> <a href="https://www.google.com/maps/search/?q=Wolverhampton,+WV1+1AD" target="_blank">[View on Google Maps]</a></li>
+            <li><strong>ALDI</strong> – Known for low-cost groceries, ALDI offers good quality at great prices. Located at <em>Wolverhampton, WV1 1LT</em> <a href="https://www.google.com/maps/search/?q=Wolverhampton,+WV1+1LT" target="_blank">[View on Google Maps]</a></li>
+            <li><strong>Co-op</strong> – A smaller store for quick and convenient shopping, often located close to residential areas. <a href="https://www.google.com/maps/search/?q=Wolverhampton,+WV1+1JJ" target="_blank">[View on Google Maps]</a></li>
+        </ul>
 
-<!-- Budgeting Tool Form -->
-<form id="budget-form">
-    <label for="income">Monthly Income ($): </label>
-    <input type="number" id="income" required><br><br>
+        <h4>2. Public Transportation (Buses)</h4>
+        <p>Wolverhampton has an efficient bus network for students to use. Some tips:</p>
+        <ul>
+            <li><strong>National Express West Midlands</strong> – The primary bus provider in the area. You can get a student discount on travel cards. <a href="https://www.google.com/maps/search/?q=Wolverhampton+Bus+Station" target="_blank">[View Bus Station on Google Maps]</a></li>
+            <li><strong>Travel Pass</strong> – You can buy a student bus pass for unlimited travel within Wolverhampton, or use contactless payment options on buses.</li>
+            <li><strong>Route Information</strong> – The main bus station is located near Wolverhampton train station. Check local routes for the best travel options to and from campus.</li>
+        </ul>
 
-    <label for="food-expenses">Food ($): </label>
-    <input type="number" id="food-expenses" required><br><br>
+        <h4>3. Additional Local Services</h4>
+        <p>Students also benefit from other local services and discounts:</p>
+        <ul>
+            <li><strong>Student Discounts</strong> – Many local businesses offer discounts to students. Show your student ID to save on food, shopping, and more.</li>
+            <li><strong>Health Services</strong> – The University of Wolverhampton provides access to health services, including mental health support, so be sure to check out the resources available to you.</li>
+        </ul>
+    </section>
 
-    <label for="rent-expenses">Rent ($): </label>
-    <input type="number" id="rent-expenses" required><br><br>
+</section>
 
-    <label for="entertainment-expenses">Entertainment ($): </label>
-    <input type="number" id="entertainment-expenses" required><br><br>
 
-    <button type="submit">Calculate Budget</button>
-</form>
-<p id="monthly-budget">Remaining Budget: $0</p>
+
+
+
+
+
+
+
+
 
 
 
@@ -89,6 +134,12 @@
         document.getElementById('monthly-budget').textContent = `Remaining Budget: $${remainingBudget.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
     });
 </script>
+
+
+
+
+
+
 
 </body>
 </html>

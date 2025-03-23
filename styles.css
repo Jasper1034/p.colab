@@ -356,6 +356,66 @@ footer {
 
 
 
+#helpful-info {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+#helpful-info h3 {
+  font-size: 1.6em;
+  color: #003366;
+}
+
+#helpful-info h4 {
+  font-size: 1.4em;
+  color: #004080;
+}
+
+#helpful-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#helpful-info ul li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+#helpful-info ul li strong {
+  color: #003366;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
