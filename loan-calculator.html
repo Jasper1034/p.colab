@@ -17,11 +17,16 @@
     </ul>
 </nav>
 
+
+
+
+
+
 <section id="loan-calculator">
     <h2>Student Loan Calculator</h2>
     <p>Estimate your monthly loan payment:</p>
     <form id="loan-form">
-        <label for="loan-amount">Loan Amount ($): </label>
+        <label for="loan-amount">Loan Amount (£): </label>
         <input type="number" id="loan-amount" required><br><br>
 
         <label for="interest-rate">Interest Rate (%): </label>
@@ -32,8 +37,40 @@
 
         <button type="submit">Calculate Loan Payment</button>
     </form>
-    <p id="loan-payment">Monthly Payment: $0</p>
-    <p id="total-payment">Total to be Paid: $0</p>
+    <p id="loan-payment">Monthly Payment: £0</p>
+    <p id="total-payment">Total to be Paid: £0</p>
+
+    <section id="loan-installment-info">
+        <h3>University of Wolverhampton Tuition Fee Installment Plan</h3>
+        <p>The University of Wolverhampton offers a structured tuition fee installment plan to assist students in managing their tuition payments effectively. The standard plan is as follows:</p>
+
+        <h4>Installment Breakdown:</h4>
+        <ul>
+            <li><strong>First Installment:</strong> 25% of the total tuition fee, due within 14 days after the first term commences.</li>
+            <li><strong>Second Installment:</strong> 25% of the total tuition fee, due at the start of the second term.</li>
+            <li><strong>Third Installment:</strong> 50% of the total tuition fee, due at the start of the third term.</li>
+        </ul>
+
+        <p>These installments are designed to align with the University's academic calendar, providing students with a manageable payment schedule. For detailed information on fee liability and payment deadlines, please refer to the University's official policy.</p>
+
+        <h4>Payment Methods:</h4>
+        <p>Students can choose from various payment methods, including:</p>
+        <ul>
+            <li><strong>Direct Debit:</strong> Set up a direct debit to automatically pay in three installments: November, January, and April.</li>
+            <li><strong>Full Payment:</strong> Pay the full amount online or by credit/debit card in person.</li>
+        </ul>
+        <p>More information on how to set up payments can be found on the University's payment portal:</p>
+        <p><a href="https://www.wlv.ac.uk/apply/funding-costs-fees-and-support/?utm_source=chatgpt.com" target="_blank">University Payment Portal</a></p>
+
+        <h4>Important Notes:</h4>
+        <ul>
+            <li><strong>Late Payments:</strong> Failure to adhere to the payment schedule may result in reminders and potential sanctions, including provisional withdrawal from the course. It's crucial to make payments on time to avoid such consequences.</li>
+            <li><strong>Financial Assistance:</strong> If you experience financial difficulties, it's advisable to seek assistance early by contacting the University's finance team or student support services.</li>
+        </ul>
+
+        <p>For comprehensive details, including the University's Tuition Fee Liability and Credit Control Policies, please visit the official University of Wolverhampton website:</p>
+        <p><a href="https://www.wlv.ac.uk/about-us/corporate-information/wlv-policies/tuition-fee-liability-and-credit-control-policy-/?utm_source=chatgpt.com" target="_blank">Tuition Fee Liability and Credit Control Policy</a></p>
+    </section>
 </section>
 
 <script>
@@ -49,11 +86,15 @@
             const monthlyPayment = (loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
             const totalPayment = monthlyPayment * numberOfPayments;
 
-            document.getElementById('loan-payment').textContent = `Monthly Payment: $${monthlyPayment.toFixed(2)}`;
-            document.getElementById('total-payment').textContent = `Total to be Paid: $${totalPayment.toFixed(2)}`;
+            document.getElementById('loan-payment').textContent = `Monthly Payment: £${monthlyPayment.toFixed(2)}`;
+            document.getElementById('total-payment').textContent = `Total to be Paid: £${totalPayment.toFixed(2)}`;
         }
     });
 </script>
+
+
+
+
 
 </body>
 </html>
