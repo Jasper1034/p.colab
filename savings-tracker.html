@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Savings Tracker | ForStudent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="cost-estimator.html">Cost Estimator</a></li>
+      <li><a href="loan-calculator.html">Loan Calculator</a></li>
+      <li><a href="savings-tracker.html">Savings Tracker</a></li>
+      <li><a href="budgeting-tool.html">Budgeting Tool</a></li>
+      <li><a href="financial-aid.html">Financial Aid</a></li>
+    </ul>
+</nav>
+
+<section id="savings-tracker">
+    <h2>Savings Tracker</h2>
+    <p>Track your savings goals:</p>
+    <form id="savings-form">
+        <label for="savings-goal">Savings Goal ($): </label>
+        <input type="number" id="savings-goal" required><br><br>
+
+        <label for="current-savings">Current Savings ($): </label>
+        <input type="number" id="current-savings" required><br><br>
+
+        <button type="submit">Calculate Remaining Savings</button>
+    </form>
+    <p id="remaining-savings">Remaining to Save: $0</p>
+</section>
+
+<script>
+    document.getElementById('savings-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const savingsGoal = parseFloat(document.getElementById('savings-goal').value);
+        const currentSavings = parseFloat(document.getElementById('current-savings').value);
+
+        if (!isNaN(savingsGoal) && !isNaN(currentSavings)) {
+            const remainingSavings = savingsGoal - currentSavings;
+            document.getElementById('remaining-savings').textContent = `Remaining to Save: $${remainingSavings.toFixed(2)}`;
+        }
+    });
+</script>
+
+</body>
+</html>

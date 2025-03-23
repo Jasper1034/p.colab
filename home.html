@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h2>Welcome to ForStudent Finance Assistant</h2>
+
+    <meta charset="UTF-8">
+    <title>Home | ForStudent</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+          if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'landing.html';
+          }
+        }
+    </script>
+</head>
+<body>
+
+<nav id="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="cost-estimator.html">Cost Estimator</a></li>
+      <li><a href="loan-calculator.html">Loan Calculator</a></li>
+      <li><a href="savings-tracker.html">Savings Tracker</a></li>
+      <li><a href="budgeting-tool.html">Budgeting Tool</a></li>
+      <li><a href="financial-aid.html">Financial Aid</a></li>
+    </ul>
+</nav>
+  
+<!-- Sign-Up Modal -->
+<div id="signup-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('signup-modal')">&times;</span>
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('login-modal')">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <span class="sign-up-btn" onclick="toggleSignupModal()">Sign up here</span></p>
+    </div>
+</div>
+
+<section id="home">
+    <p>Welcome to the University of Wolverhampton! The university is known for its strong commitment to academic excellence, student support, and career development.</p>
+
+    <h3>About the University</h3>
+    <p>The University of Wolverhampton offers a wide range of undergraduate and postgraduate programs across multiple disciplines, including Business, Engineering, Health, and Social Sciences. The university boasts modern facilities, dedicated staff, and a diverse student community.</p>
+
+    <h3>Key Information for New Students</h3>
+    <ul>
+        <li><strong>Accommodation:</strong> On-campus and nearby private accommodation options are available to suit various budgets.</li>
+        <li><strong>Student Support:</strong> The university offers comprehensive support services, including mental health resources, academic guidance, and career services.</li>
+        <li><strong>Campus Life:</strong> Join numerous clubs, societies, and events to enhance your university experience.</li>
+        <li><strong>International Students:</strong> Dedicated support services ensure international students receive guidance on visas, cultural adaptation, and studies.</li>
+    </ul>
+
+    <p>For more information, visit the official <a href="https://www.wlv.ac.uk/" target="_blank">University of Wolverhampton website</a>.</p>
+</section>
+
+<!-- New Section for Courses & Tuition Fees -->
+<section id="courses-and-fees">
+    <h2>University of Wolverhampton Courses & Tuition Fees</h2>
+    <p>Explore the variety of undergraduate and postgraduate courses available at the University of Wolverhampton. The university offers competitive tuition fees, with financial aid options available.</p>
+
+    <h3>Undergraduate Courses</h3>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Tuition Fees (per year)</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>Bachelor of Arts in Business Management</td>
+            <td>£12,500</td>
+            <td>3 Years</td>
+        </tr>
+        <tr>
+            <td>Bachelor of Science in Computer Science</td>
+            <td>£13,000</td>
+            <td>3 Years</td>
+        </tr>
+        <tr>
+            <td>Bachelor of Arts in English Literature</td>
+            <td>£11,800</td>
+            <td>3 Years</td>
+        </tr>
+        <tr>
+            <td>Bachelor of Science in Nursing</td>
+            <td>£14,000</td>
+            <td>3 Years</td>
+        </tr>
+    </table>
+    <hr> <!-- Horizontal line added between sections -->
+
+    <h3>Postgraduate Courses</h3>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Tuition Fees (per year)</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>Master of Business Administration (MBA)</td>
+            <td>£15,000</td>
+            <td>1 Year</td>
+        </tr>
+        <tr>
+            <td>Master of Science in Data Science</td>
+            <td>£14,500</td>
+            <td>1 Year</td>
+        </tr>
+        <tr>
+            <td>Master of Arts in International Relations</td>
+            <td>£13,500</td>
+            <td>1 Year</td>
+        </tr>
+    </table>
+    <hr> <!-- Horizontal line added between sections -->
+
+    <h3>Additional Information</h3>
+    <p>For more detailed information on specific courses, including entry requirements, application deadlines, and detailed breakdowns of tuition fees, please visit the <a href="https://www.wlv.ac.uk/courses" target="_blank">University of Wolverhampton Courses Page</a>.</p>
+</section>
+
+
+
+
+
+
+
+
+<section id="accommodation">
+  <h2>University of Wolverhampton Accommodation</h2>
+  <p>The University of Wolverhampton offers a variety of accommodation options across its campuses, providing students with comfortable and convenient living arrangements. Below are the available options:</p>
+
+  <h3>City Campus (Wolverhampton City Centre)</h3>
+  <table>
+      <tr>
+          <th>Accommodation Name</th>
+          <th>Room Type</th>
+          <th>Weekly Rent</th>
+          <th>Tenancy Length</th>
+      </tr>
+      <tr>
+          <td>Victoria Hall</td>
+          <td>En-suite</td>
+          <td>£119</td>
+          <td>42 or 52 weeks</td>
+      </tr>
+      <tr>
+          <td>City Campus Accommodation</td>
+          <td>En-suite</td>
+          <td>£114</td>
+          <td>42 or 52 weeks</td>
+      </tr>
+      <tr>
+          <td>City Campus Accommodation</td>
+          <td>Shared Bathroom</td>
+          <td>£96</td>
+          <td>42 or 52 weeks</td>
+      </tr>
+  </table>
+  <hr>
+
+  <h3>Walsall Campus</h3>
+  <table>
+      <tr>
+          <th>Accommodation Name</th>
+          <th>Room Type</th>
+          <th>Weekly Rent</th>
+          <th>Tenancy Length</th>
+      </tr>
+      <tr>
+          <td>Walsall Campus Accommodation</td>
+          <td>En-suite</td>
+          <td>£114</td>
+          <td>42 or 52 weeks</td>
+      </tr>
+  </table>
+  <hr>
+
+  <h3>Telford Campus</h3>
+  <table>
+      <tr>
+          <th>Accommodation Name</th>
+          <th>Room Type</th>
+          <th>Weekly Rent</th>
+          <th>Tenancy Length</th>
+      </tr>
+      <tr>
+          <td>Telford Campus Accommodation</td>
+          <td>En-suite</td>
+          <td>£114</td>
+          <td>42 or 52 weeks</td>
+      </tr>
+  </table>
+  <hr>
+
+  <h3>Private Accommodation Near Campus</h3>
+  <p>For students seeking off-campus living, several private accommodations are available near the university, offering various amenities and room types. Some popular options include:</p>
+  <ul>
+      <li><strong>iQ Fiveways House</strong> – Located close to the City Campus, offering en-suite rooms and two-bedroom apartments. Prices start from £114 per week. <a href="https://www.iqstudentaccommodation.com/wolverhampton">More details</a></li>
+      <li><strong>Heantun Point</strong> – Situated near the City Campus, providing en-suite rooms with modern facilities. Prices start from £114 per week. <a href="https://www.studentcrowd.com/best-halls-l1008001-s1008518-university-of-wolverhampton">More details</a></li>
+      <li><strong>Chambers 51</strong> – Offers a variety of room types near the City Campus, with prices starting from £91 per week. <a href="https://www.studentcrowd.com/best-halls-l1008001-s1008518-university-of-wolverhampton">More details</a></li>
+  </ul>
+  <hr>
+
+  <h3>Additional Information</h3>
+  <p>All university-managed accommodations are fully furnished and include both wired and wireless internet access. Utilities such as water, electricity, and heating are included in the rent. For more detailed information on each accommodation option, including application procedures and deadlines, please visit the official University of Wolverhampton Accommodation Services page: <a href="https://www.wlv.ac.uk/university-life/accommodation/">University Accommodation</a></p>
+</section>
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+<div class="profile-container">
+  <span class="profile-icon" onclick="toggleProfileModal()">👤</span>
+  <button class="logout-btn" onclick="logoutUser()">Log Out</button>
+</div>
+
+<!-- Profile Modal -->
+<div id="profile-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('profile-modal')">&times;</span>
+    <h2>User Profile</h2>
+    <p><strong>Username:</strong> <span id="profile-username">Loading...</span></p>
+    <p><strong>Email:</strong> <span id="profile-email">Loading...</span></p>
+  </div>
+</div>
+
+<script>
+// Show Profile Details
+function toggleProfileModal() {
+    document.getElementById('profile-modal').style.display = 'block';
+
+    const username = localStorage.getItem('username') || 'N/A';
+    const email = localStorage.getItem('email') || 'N/A';
+
+    document.getElementById('profile-username').textContent = username;
+    document.getElementById('profile-email').textContent = email;
+}
+
+
+// Close Modal Function
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF2F2; /* Soft pinkish background */
+    color: #2D336B; /* Dark blue for text */
+}
+
+header {
+    background-color: #2D336B; /* Deep blue header */
+    color: #FFF2F2;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #2D336B;
+    padding-left: 510px;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #A9B5DF; /* Soft pastel blue */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="number"], button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+button {
+    background-color: #7886C7; /* Medium blue for buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2D336B; /* Darker blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2D336B;
+    color: #FFF2F2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Style for Navigation Bar */
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: #000; /* Black background */
+    padding: 15px 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for a modern effect */
+    border-bottom: 2px solid #fff; /* White bottom border for definition */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  #navbar ul li {
+    display: inline-block;
+    margin: 0 20px; /* More space between links */
+  }
+  
+  #navbar ul li a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    font-size: 18px;
+    font-weight: 600; /* Bold text for emphasis */
+    padding: 12px 20px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  #navbar ul li a:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+  }
+  
+  #navbar ul li a:active {
+    transform: scale(0.98); /* Slight shrink effect when clicked */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-top: 80px; /* Add space for the sticky navbar */
+  }
+  
+  /* Ensuring smooth scrolling when clicking links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    #navbar ul {
+      padding: 0;
+    }
+  
+    #navbar ul li {
+      display: block; /* Stack links on smaller screens */
+      margin: 10px 0;
+    }
+  }
+  
+  /* Style for Navigation Bar */
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: #000; /* Black background */
+    padding: 15px 0;
+    z-index: 10; /* Lower z-index */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for modern effect */
+    border-bottom: 2px solid #fff; /* White bottom border for definition */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .profile-container {
+    position: absolute; /* Absolute positioning */
+    top: 20px;           /* Distance from top */
+    right: 20px;         /* Distance from right */
+  }
+  
+  .profile-icon {
+    font-size: 30px;     /* Medium size */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .profile-icon:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+  }
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Profile Section */
+.profile-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;  /* To align the profile icon and logout button horizontally */
+    gap: 10px;      /* Space between the icon and the button */
+  }
+  
+  .profile-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  .logout-btn {
+    padding: 10px 15px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;  /* Hide the logout button by default */
+  }
+  
+  .logout-btn:hover {
+    background-color: #444;
+  }
+  
+  /* Show logout button when the user is logged in */
+  .logged-in .logout-btn {
+    display: block;
+  }
+
+
+
+
+  /* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999; /* Higher z-index to make it appear on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+  }
+  
+  /* Add higher z-index for the sign-up modal when it's active */
+  #signup-modal {
+    z-index: 10000;  /* Ensure the sign-up modal is above the login modal */
+  }
+  
+  #login-modal {
+    z-index: 9999; /* Ensure the login modal has a slightly lower z-index */
+  }
+  
+  /* Modal Content (same for both modals) */
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+  }
+  
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  form input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #444;
+  }
+  
+  /* Sign-Up Button */
+  #login-modal .sign-up-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000;
+    font-size: 16px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  hr {
+    border: 0;
+    border-top: 2px solid #ccc; /* Color and thickness of the line */
+    margin: 20px 0;
+}
+
+
+
+
