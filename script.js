@@ -138,35 +138,55 @@ function toggleLoginModal() {
 
 
 
+// Event listener for the Cost Estimator and Budgeting Tool
+document.addEventListener('DOMContentLoaded', function() {
 
-// Cost Estimator
-document.getElementById('cost-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const tuition = parseFloat(document.getElementById('tuition').value);
-    const living = parseFloat(document.getElementById('living').value);
-    
-    if (!isNaN(tuition) && !isNaN(living)) {
-      const totalCost = tuition + living;
-      document.getElementById('total-cost').textContent = `Total Cost: $${totalCost.toFixed(2)}`;
-    }
+  // Cost Estimator Logic
+  document.getElementById('cost-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const tuition = parseFloat(document.getElementById('tuition').value);
+      const living = parseFloat(document.getElementById('living').value);
+
+      if (!isNaN(tuition) && !isNaN(living)) {
+          const totalCost = tuition + living;
+          // Displaying total cost
+          document.getElementById('total-cost').textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+      } else {
+          document.getElementById('total-cost').textContent = 'Please enter valid amounts for Tuition and Living Expenses.';
+      }
   });
-  
-// Budgeting Tool with Categories
-document.getElementById('budget-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const income = parseFloat(document.getElementById('income').value);
-    const foodExpenses = parseFloat(document.getElementById('food-expenses').value);
-    const rentExpenses = parseFloat(document.getElementById('rent-expenses').value);
-    const entertainmentExpenses = parseFloat(document.getElementById('entertainment-expenses').value);
-  
-    if (!isNaN(income) && !isNaN(foodExpenses) && !isNaN(rentExpenses) && !isNaN(entertainmentExpenses)) {
-      const totalExpenses = foodExpenses + rentExpenses + entertainmentExpenses;
-      const remainingBudget = income - totalExpenses;
-      document.getElementById('monthly-budget').textContent = `Remaining Budget: $${remainingBudget.toFixed(2)}`;
-    }
+
+  // Budgeting Tool Logic
+  document.getElementById('budget-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const income = parseFloat(document.getElementById('income').value);
+      const foodExpenses = parseFloat(document.getElementById('food-expenses').value);
+      const rentExpenses = parseFloat(document.getElementById('rent-expenses').value);
+      const entertainmentExpenses = parseFloat(document.getElementById('entertainment-expenses').value);
+
+      if (!isNaN(income) && !isNaN(foodExpenses) && !isNaN(rentExpenses) && !isNaN(entertainmentExpenses)) {
+          const totalExpenses = foodExpenses + rentExpenses + entertainmentExpenses;
+          const remainingBudget = income - totalExpenses;
+          // Displaying remaining budget
+          document.getElementById('monthly-budget').textContent = `Remaining Budget: $${remainingBudget.toFixed(2)}`;
+      } else {
+          document.getElementById('monthly-budget').textContent = 'Please enter valid amounts for all expenses.';
+      }
   });
-  
-  
+
+});
+
+
+
+
+
+
+
+
+
+
 
 
 // Student Loan Calculator
