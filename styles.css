@@ -21,9 +21,9 @@ main {
     padding: 20px;
 }
 
-h2 {
+.welcome {
     color: #2D336B;
-    padding-left: 410px;
+    padding-left: 400px;
 }
 
 section {

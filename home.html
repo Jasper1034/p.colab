@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <h2>Welcome to ForStudent Finance Assistant and Calculator</h2>
+    <h2 class="welcome">Welcome to ForStudent Finance Assistant and Calculator</h2>
 
     <meta charset="UTF-8">
     <title>Home | ForStudent</title>
@@ -15,16 +15,6 @@
     </script>
 
 
-
-
-
-    <!--firebase code-->
-
-    <!-- Firebase SDKs -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
 
 
 
@@ -307,33 +297,35 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <script src="script.js"></script>
 
-<div class="profile-container">
-  <span class="profile-icon" onclick="toggleProfileModal()">👤</span>
-  <button class="logout-btn" onclick="logoutUser()">Log Out</button>
-</div>
 
-<!-- Profile Modal -->
-<div id="profile-modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('profile-modal')">&times;</span>
-    <h2>User Profile</h2>
-    <p><strong>Username:</strong> <span id="profile-username">Loading...</span></p>
-    <p><strong>Email:</strong> <span id="profile-email">Loading...</span></p>
+
+
+
+
+ <div class="profile-container">
+    <span class="profile-icon" onclick="toggleProfileModal()">👤</span>
   </div>
-</div>
+  
+  Profile Modal
+  <div id="profile-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('profile-modal')">&times;</span>
+      <h2>User Profile</h2>
+      <p><strong>Username:</strong> <span id="profile-username">Loading...</span></p>
+      <p><strong>Email:</strong> <span id="profile-email">Loading...</span></p>
+      <button onclick="logoutUser()">Log Out</button>
+    </div>
+  </div>
+  
 
-<script>
+
+
+
+
+
+ <script>
 // Show Profile Details
 function toggleProfileModal() {
     document.getElementById('profile-modal').style.display = 'block';
@@ -350,7 +342,7 @@ function toggleProfileModal() {
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';
 }
-</script>
+</script> 
 
 </body>
 </html>
